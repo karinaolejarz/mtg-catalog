@@ -1,0 +1,16 @@
+.App {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  width: auto;
+}
+
+
+body {
+  background-image: url(https://davewhitepaintings.files.wordpress.com/2015/09/the-sky-connects-everyone.jpg);
+  display: flex;
+  width: auto;
+  justify-content: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
