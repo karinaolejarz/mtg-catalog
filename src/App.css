@@ -7,10 +7,10 @@
 
 
 body {
-  background-image: url(https://davewhitepaintings.files.wordpress.com/2015/09/the-sky-connects-everyone.jpg);
-  display: flex;
-  width: auto;
+  background-image: url(./photos/background.jpg);
   justify-content: center;
   background-repeat: no-repeat;
   background-attachment: fixed;
+  margin: 0;
+  padding-bottom: 5em ;
 }

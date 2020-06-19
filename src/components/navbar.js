@@ -1,17 +1,17 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import logo from './logo.png';
+import logo from '../photos/logo.png';
 
 function Navbar() {
     return (
-        <nav className="navbar"
+        <nav> 
+        <div className="navbar"
         style={{
-            width:"auto",
+            width:"100%",
             height:"5em",
-            paddingTop:"1em",
-            marginBottom:"5em",
+            paddingTop:"3em",
+            marginBottom:"3em",
             display:"flex",
-            //background:"lightBlue",
 
             
 
@@ -23,6 +23,7 @@ function Navbar() {
             listStyle:"none",
             display:"flex",
             whiteSpace:"nowrap",
+            paddingLeft:"20em"
 
 
             
@@ -31,11 +32,12 @@ function Navbar() {
             <Link to="/"><img src={logo}></img> </Link>
 
             <Link to="/about" style={{textDecoration:"none"}}>  
-            <li style={{marginTop:"0.7em", marginLeft:"7em", color:"grey"}}>About</li> </Link>
+            <li style={{marginTop:"0.7em", marginLeft:"7em", color:"#505050"}}>About</li> </Link>
 
             <Link to="/catalog" style={{textDecoration:"none"}}>  
-            <li style={{marginTop:"0.7em", marginLeft:"7em", color:"grey"}}>Catalog</li> </Link>
+            <li style={{marginTop:"0.7em", marginLeft:"7em", color:"#505050"}}>Catalog</li> </Link>
         </ul>
+        </div>
         </nav>
 
     )

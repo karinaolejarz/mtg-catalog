@@ -1,6 +1,4 @@
 import React, { Component } from 'react';
-import axios from 'axios';
-const mtg = require('mtgsdk');
 
 class Card extends Component {
     constructor(props) {
@@ -11,12 +9,13 @@ class Card extends Component {
       }
     }
     componentDidMount() {
-    axios.get('https://api.magicthegathering.io/v1/cards')
-    .then(response => {
-      console.log(response)
-      this.setState({
-          isLoaded:true,
-          cards: response.data ? response.data.cards : []
+    fetch('https://api.scryfall.com/cards/search?q=cmc%3D3')
+
+    .then(response => response.json())
+      .then(json => {
+        this.setState({
+          isLoaded: true,
+          cards: json.data,
         })
     })
     .catch(error => {
@@ -28,41 +27,53 @@ class Card extends Component {
     const { isLoaded, cards } = this.state;
 
     if (!isLoaded) {
-        return <div>Loading...</div>
+        return <div style={{color:"#505050"}}>Loading cards...</div>
     }
 
     return (
-      <div>
+      <div
+ style={{
+    display:"flex",
+    flexDirection:"row",
+    flexWrap:"wrap",
+  }}
+      >
   {
-  cards.length ?
-  cards.map(card => <div key={card.id}>
+ 
+  cards.map(card =>
 
-  <div
-  style={{
-    width:"auto",
-  }}
-  >
   
-  <ul
+  <ul key={card.id}
   style={{
-    display:"table",
-    float: "left",
-    listStyle:"none"
+    listStyle:"none",
+    width:"20%",
+    margin:"0",
+    padding:"0",
+    marginTop:"2em",
+    color:"#505050"
+  }}
+  >
+  <li
+  style={{
+    padding:"0",
+    marginTop:"1em",
 
   }}
   >
+  <img src={card.image_uris.small}
+  style={{
+    border:"solid",
+    borderRadius:"10px"
+  }}
+  />
+  </li>
   <li>
-  <img src={card.imageUrl}/>
+    <p>
+      {card.name}
+    </p>
   </li>
   </ul>
-  
-  </div>
-
-
-  </div>
-
   ) 
-  : null
   }
       </div>
     )
