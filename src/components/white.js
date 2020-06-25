@@ -1,9 +1,8 @@
 import React from "react";
-import Search from "./search";
+import FilterWhite from "./filterWhite";
 import '../App.css';
-import Footer from './footer';
 
-function Catalog() {
+function White() {
   return (
     <div
     style={{
@@ -11,13 +10,14 @@ function Catalog() {
       display:"flex",
       justifyContent:"center",
     }}>
-      <Search />
+
+      <FilterWhite />
 
 
+      
     </div>
-    
   )
 }
 
 
-export default Catalog;
+export default White;

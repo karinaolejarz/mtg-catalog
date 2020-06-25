@@ -1,5 +1,7 @@
 import React, { Component } from "react";
+import ImageZoom from "react-medium-image-zoom";
 import '../App.css';
+import { Button, Modal, Card } from 'react-bootstrap';
 import Popup from 'reactjs-popup';
 import Dropdown from './dropdown';
 import ScrollTop from './scrolltop';
@@ -11,10 +13,10 @@ function searchingFor(term) {
   }
 }
 
-class Search extends Component {
+class FilterRed extends Component {
 
   componentDidMount() {
-    fetch('https://api.scryfall.com/cards/search?q=set=m21')
+    fetch('https://api.scryfall.com/cards/search?q=c%3Ared+set=m21')
 
     .then(response => response.json())
       .then(json => {
@@ -23,18 +25,16 @@ class Search extends Component {
           cards: json.data,
         })
     })
-
+    .catch(error => {
+      console.log(error)
+    })
     }
     render() {
 
       const { isLoaded } = this.state;
   
       if (!isLoaded) {
-          return (
-          <div style={{color:"#505050"}}>
-          Loading cards...
-          </div>
-          );
+          return <div style={{color:"#505050"}}>Loading cards...</div>
       }}
     
 
@@ -59,17 +59,12 @@ this.searchHandler = this.searchHandler.bind(this);
 
 render() {
   const {term, cards} = this.state;
-  
   return (
-
-
-    
-    <div className="catalog-content">
+    <div className="smuteczek">
 
 
     <div className="Inputs" style={{width:"100%", justifyContent:"center", height:"5em", display:"flex", padding:"4em"}}>
-
-          <input type="text" class="form-control" 
+          <input type="text" class="form-control"
               onChange={this.searchHandler}
               value={term}
               placeholder="Search by name"
@@ -105,7 +100,7 @@ render() {
   >
   <div class="pop-up" style={{background:"white", width:"100%", display:"flex"}}>
     <span>
-    <div className="popup-content" style={{display:"flex", background:"white", width:"100%", justifyContent:"center"}}> 
+    <div class="popup-content" style={{display:"flex", background:"white", width:"100%", justifyContent:"center"}}> 
     <p>
     <img src={card.image_uris.normal} style={{borderRadius:"3em", padding:"2em", paddingLeft:"4em", height:"400px", width:"340px"}}/>
     </p>
@@ -143,16 +138,15 @@ render() {
             <div>
             <p style={{paddingTop:"1em"}}>{card.name}</p>
             </div>
-            <ScrollTop />
             </div>
-            
             
           )
       }
     </div>
+    <ScrollTop />
     </div>
     );
   }
 }
 
-export default Search;
+export default FilterRed;

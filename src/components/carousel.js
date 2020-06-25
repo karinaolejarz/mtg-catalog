@@ -4,19 +4,20 @@ import coreset from '../photos/coreset.jpg';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import React, { Component } from 'react'  
 import Carousel from 'react-bootstrap/Carousel' 
+import '../App.css';
 
 
 export class BootstrapCarousel extends Component {  
         render() {  
                 return (  
-                   <div>  
-                      <div class='container-fluid' >  
+                   <div className="carousel-area">  
+                      <div class='container-fluid'>  
                          <div className="row title" style={{ marginBottom:"20px"}} >  
 
                       </div>  
                    </div>  
 
-               <div className='container-fluid' >  
+               <div className='container-fluid'>  
           <Carousel>  
 
 

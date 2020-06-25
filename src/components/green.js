@@ -1,9 +1,8 @@
 import React from "react";
-import Search from "./search";
+import FilterGreen from "./filterGreen";
 import '../App.css';
-import Footer from './footer';
 
-function Catalog() {
+function Green() {
   return (
     <div
     style={{
@@ -11,13 +10,14 @@ function Catalog() {
       display:"flex",
       justifyContent:"center",
     }}>
-      <Search />
+
+      <FilterGreen />
 
 
+      
     </div>
-    
   )
 }
 
 
-export default Catalog;
+export default Green;

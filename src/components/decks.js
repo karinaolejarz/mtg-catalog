@@ -5,12 +5,18 @@ import jund from '../photos/jund.jpg';
 import temur from '../photos/temur.jpg';
 import bant from '../photos/bant.jpg';
 import chandraflame from '../photos/chandraflame.png';
+import ManaR from '../photos/Mana_R.png';
+import ManaU from '../photos/Mana_U.png';
+import ManaB from '../photos/Mana_B.png';
+import ManaW from '../photos/Mana_W.png';
+import ManaG from '../photos/Mana_G.png';
+import '../App.css';
 
 function Decks() {
 return (
 
 
-<div
+<div className="topdecks"
 style={{padding:"5em"}}
 
 > 
@@ -31,8 +37,9 @@ alignItems:"center",
   <Card.Body>
     <Card.Title>Temur Reclamation</Card.Title>
     <Card.Text>
-      Some quick example text to build on the card title and make up the bulk of
-      the card's content.
+    <img src={ManaR} style={{width:"30px", height:"30px"}}/>
+    <img src={ManaG} style={{width:"30px", height:"30px"}}/>
+    <img src={ManaU} style={{width:"30px", height:"30px"}}/>
     </Card.Text>
     <a href="https://www.mtggoldfish.com/archetype/wilderness-reclamation#paper" target="_blank" class="btn btn-secondary">Go to decklist</a>
   </Card.Body>
@@ -43,8 +50,9 @@ alignItems:"center",
   <Card.Body>
     <Card.Title>Jund Sacrifice</Card.Title>
     <Card.Text>
-      Some quick example text to build on the card title and make up the bulk of
-      the card's content.
+    <img src={ManaB} style={{width:"30px", height:"30px"}}/>
+    <img src={ManaR} style={{width:"30px", height:"30px"}}/>
+    <img src={ManaG} style={{width:"30px", height:"30px"}}/>
     </Card.Text>
     <a href="https://www.mtggoldfish.com/archetype/standard-jund-sacrifice-grn#paper" target="_blank" class="btn btn-secondary">Go to decklist</a>
   </Card.Body>
@@ -55,8 +63,9 @@ alignItems:"center",
   <Card.Body>
     <Card.Title>Bant Ramp</Card.Title>
     <Card.Text>
-      Some quick example text to build on the card title and make up the bulk of
-      the card's content.
+    <img src={ManaU} style={{width:"30px", height:"30px"}}/>
+    <img src={ManaW} style={{width:"30px", height:"30px"}}/>
+    <img src={ManaG} style={{width:"30px", height:"30px"}}/>
     </Card.Text>
     <a href="https://www.mtggoldfish.com/archetype/bant-ramp#paper" target="_blank" class="btn btn-secondary">Go to decklist</a>
   </Card.Body>
@@ -67,8 +76,7 @@ alignItems:"center",
   <Card.Body>
     <Card.Title>Mono-Red Aggro</Card.Title>
     <Card.Text>
-      Some quick example text to build on the card title and make up the bulk of
-      the card's content.
+      <img src={ManaR} style={{width:"30px", height:"30px"}}/>
     </Card.Text>
     <a href="https://www.mtggoldfish.com/archetype/mono-red-aggro#paper" target="_blank" class="btn btn-secondary">Go to decklist</a>
   </Card.Body>
