@@ -4,7 +4,7 @@ import Button from 'react-bootstrap/Button';
 import jund from '../photos/jund.jpg';
 import temur from '../photos/temur.jpg';
 import bant from '../photos/bant.jpg';
-import chandraflame from '../photos/chandraflame.png';
+import knight from '../photos/knight.jpg';
 import ManaR from '../photos/Mana_R.png';
 import ManaU from '../photos/Mana_U.png';
 import ManaB from '../photos/Mana_B.png';
@@ -25,7 +25,7 @@ style={{padding:"5em"}}
 
 <decks
 style={{
-paddingTop:"5em",
+paddingTop:"3em",
 display:"flex",
 justifyContent:"space-between",
 alignItems:"center",
@@ -71,14 +71,15 @@ alignItems:"center",
   </Card.Body>
 </Card>
 
-<Card style={{ width: '18rem', borderRadius:"30px"}}>
-  <Card.Img variant="top" src={chandraflame} style={{height:"150px"}}/>
+<Card style={{ width: '18rem', borderRadius:"30px" }}>
+  <Card.Img variant="top" src={knight} style={{height:"150px"}}/>
   <Card.Body>
-    <Card.Title>Mono-Red Aggro</Card.Title>
+    <Card.Title>Rakdos Knights</Card.Title>
     <Card.Text>
-      <img src={ManaR} style={{width:"30px", height:"30px"}}/>
+    <img src={ManaB} style={{width:"30px", height:"30px"}}/>
+    <img src={ManaR} style={{width:"30px", height:"30px"}}/>
     </Card.Text>
-    <a href="https://www.mtggoldfish.com/archetype/mono-red-aggro#paper" target="_blank" class="btn btn-secondary">Go to decklist</a>
+    <a href="https://www.mtggoldfish.com/archetype/rakdos-knights#paper" target="_blank" class="btn btn-secondary">Go to decklist</a>
   </Card.Body>
 </Card>
 

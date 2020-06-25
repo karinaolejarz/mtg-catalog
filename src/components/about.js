@@ -6,18 +6,16 @@ import Footer from './footer';
 function About() {
     return (
         <div style={{display:"flex",justifyContent:"center",paddingTop:"6em"}}>
-        <div className="about-section" style={{width:"60%",display:"flex",justifyContent:"center"}}>
+        <div className="about-section" style={{width:"50%",display:"flex",justifyContent:"center", alignItems:"center"}}>
                 <p style={{color:"#505050"}}>
-                
+                <h3>What is The MTG Card Catalog?</h3>
+                <br/>
                 The MTG Card Catalog is the Magic Card Database. Search for the perfect addition to your deck. 
                 Browse through cards from Magic's entire history. See cards from the most recent sets 
                 and discover what players just like you are saying about them.
-<br/><br/>
-Each game of Magic represents a battle between wizards known as planeswalkers who cast spells, use artifacts, and summon creatures 
-as depicted on individual cards in order to defeat their opponents, typically, but not always, by draining them of their 20 starting 
-life points in the standard format. Although the original concept of the game drew heavily from the motifs of traditional fantasy 
-role-playing games such as Dungeons & Dragons, the gameplay bears little similarity to pencil-and-paper adventure games, while simultaneously 
-having substantially more cards and more complex rules than many other card games.
+                <br/><br/>
+                Find the inspiration for your next combo deck, discover cards you didn't even know existed, 
+                be reminded of forgotten gems, or just browse through the thousands of cards.
 </p>
 <p><img src={jace}></img></p>
 
