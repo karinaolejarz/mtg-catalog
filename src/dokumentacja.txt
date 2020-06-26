@@ -1,0 +1,23 @@
+The MTG Card Catalog to aplikacja poświęcona kolekcjonerskiej grze karcianej Magic: The Gathering. Głównym jej celem jest umożliwienie łatwego wyszukiwania poszczególnych kart, z jednoczesnym dostępem do aktualnych informacji na temat granych talii, a także zwykłych newsów ze świata MTG. 
+
+Sama zakładka 'Catalog" pozwala przeglądać karty z zestawu Core Set 2021, wyszukiwać je po nazwie oraz filtrować według koloru many. Kliknięcie na kartę spowoduje wyświetlenie okienka z powiększonym zdjęciem karty, informacjami na temat stopnia jej rzadkości, 
+
+Strona główna informuje użytkownika, jakie talie są obecnie najlepsze oraz podaje kilka przydatnych linków do zewnętrznych stron, w tym do szczegółowych informacji o wspomnianych taliach.
+
+Na potrzeby bezproblemowego poruszania się wśród danych na tym etapie rozwoju aplikacji, pobierane są karty, które pochodzą z jednego zestawu. W przyszłości planowane jest dodanie reszty elementów, a także wprowadzenie funkcji pobrania informacji o jednej, losowej karcie. Prawdopodobnie aplikacja stanie się z czasem mniej zależna od zewnętrznych stron.
+
+Użyte API: https://scryfall.com/docs/api/cards
+
+Do budowy aplikacji wykorzystano:
+https://www.npmjs.com
+https://getbootstrap.com
+https://mdbootstrap.com
+
+Posłużono się poradnikami m.in.:
+https://pl.reactjs.org
+https://typeofweb.com/wprowadzenie-kurs-react-js/
+oraz wieloma tutorialiami na platformie YouTube.
+
+Inspiracje:
+https://mtg.emshea.com
+https://gatherer.wizards.com/Pages/Default.aspx
